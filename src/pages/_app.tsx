@@ -1,18 +1,27 @@
+import '../styles/globals.scss';
+
 import Head from 'next/head';
-import { GlobalStyles } from '../styles/globals';
+import styled from '../styles/app.module.scss';
+
+// Components
+import Header from '../components/Header';
+import Player from '../components/Player';
 
 function MyApp({ Component, pageProps }) {
   return (
-    <>
+    <div className={styled.wrapper}>
       <Head>
-        <title>Create Next App</title>
-        <link rel="icon" href="/favicon.ico" />
+        <title>PodCaster</title>
+        <link rel="icon" href="/favicon.png" />
       </Head>
 
-      <GlobalStyles />
+      <main>
+        <Header/>
+        <Component {...pageProps} />
+      </main>
 
-      <Component {...pageProps} />
-    </>
+      <Player />
+    </div>
   )
 }
 
