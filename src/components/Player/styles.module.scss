@@ -12,6 +12,8 @@
  flex-direction: column;
  justify-content: space-between;
 
+ transition: all .3s ease;
+
  header {
   display: flex;
   align-items: center;
